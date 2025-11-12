@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Κλείστε Ραντεβού - Glamour Nail Salon</title>
+  <link rel="icon" type="image/jpeg" href="Logo.jpeg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero small-hero">
+    <h1>📅 Κλείστε Ραντεβού</h1>
+    <div class="hero-buttons">
+      <a href="index.html" class="btn-secondary">🏠 Αρχική</a>
+      <a href="price-list.html" class="btn-primary">💖 Τιμοκατάλογος</a>
+    </div>
+  </header>
+
+  <main class="booking-main">
+    <section class="booking-section">
+      <h2>Κλείστε το Ραντεβού σας</h2>
+
+      <!-- ✨ Google Form integration -->
+      <form 
+        action="https://docs.google.com/forms/d/e/1FAIpQLScXYZabc12345/formResponse" 
+        method="POST" 
+        target="hidden_iframe"
+        onsubmit="submitted=true;"
+        id="booking-form"
+      >
+        <label for="name">Ονοματεπώνυμο</label>
+        <input type="text" name="entry.1111111111" id="name" required placeholder="Πλήρες όνομα" />
+
+        <label for="phone">Τηλέφωνο</label>
+        <input type="tel" name="entry.2222222222" id="phone" pattern="[0-9]{10}" required placeholder="π.χ. 2101234567" />
+
+        <label for="service">Υπηρεσία</label>
+        <select name="entry.3333333333" id="service" required>
+          <option value="">Επιλέξτε</option>
+          <option>Μανικιούρ</option>
+          <option>Πεντικιούρ</option>
+          <option>Gel Nails</option>
+          <option>Φρύδια / Βλεφαρίδες</option>
+        </select>
+
+        <label for="date">Ημερομηνία</label>
+        <input type="date" id="date" required />
+
+        <label for="time">Ώρα</label>
+        <input type="time" id="time" required />
+
+        <!-- Hidden combined date+time sent to Google Form -->
+        <input type="hidden" name="entry.4444444444" id="datetime" />
+
+        <button type="submit">Κράτηση</button>
+      </form>
+
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+      <p id="confirmation"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Glamour Nail Salon. Όλα τα δικαιώματα διατηρούνται.</p>
+    <p>
+      Κατασκευή Ιστοσελίδας από <a href="#">Glamour Web Design</a> |
+      <a href="#">Όροι Χρήσης</a> | <a href="#">Πολιτική Απορρήτου</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
